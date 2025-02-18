@@ -1,5 +1,3 @@
-# Modifications Copyright(C) [Year of 2024] Advanced Micro Devices, Inc. All rights reserved.
-
 from functools import partial
 import torch
 from torch import nn, einsum
@@ -72,6 +70,7 @@ class CrossAttention(nn.Module):
         relative_position=False,
         temporal_length=None,
         img_cross_attention=False,
+        record_attn_probs=False,
     ):
         super().__init__()
         inner_dim = dim_head * heads
@@ -86,9 +85,10 @@ class CrossAttention(nn.Module):
         self.to_out = nn.Sequential(
             nn.Linear(inner_dim, query_dim), nn.Dropout(dropout)
         )
+        # self.mha = nn.MultiheadAttention(inner_dim, heads, bias=False, batch_first=True)
 
         self.image_cross_attention_scale = 1.0
-        self.text_context_len = 77
+        self.text_context_len = 200
         self.img_cross_attention = img_cross_attention
         if self.img_cross_attention:
             self.to_k_ip = nn.Linear(context_dim, inner_dim, bias=False)
@@ -104,11 +104,15 @@ class CrossAttention(nn.Module):
                 num_units=dim_head, max_relative_position=temporal_length
             )
         else:
+            self.forward = self.native_forward
             ## only used for spatial attention, while NOT for temporal attention
             if FLASH_IS_AVAILBLE and temporal_length is None:
                 self.forward = self.efficient_forward_flash_attention
             elif XFORMERS_IS_AVAILBLE and temporal_length is None:
                 self.forward = self.efficient_forward
+        
+        self.record_attn_probs = record_attn_probs
+        self.attention_probs = None
 
     def forward(self, x, context=None, mask=None):
         h = self.heads
@@ -130,6 +134,12 @@ class CrossAttention(nn.Module):
             v = self.to_v(context)
 
         q, k, v = map(lambda t: rearrange(t, "b n (h d) -> (b h) n d", h=h), (q, k, v))
+
+        # Record the attention probs
+        if self.record_attn_probs:
+            attention_score = torch.einsum("b i d, b j d -> b i j", q, k) * self.scale
+            self.attention_probs = attention_score.softmax(dim=-1)
+
         sim = torch.einsum("b i d, b j d -> b i j", q, k) * self.scale
         if self.relative_position:
             len_q, len_k, len_v = q.shape[1], k.shape[1], v.shape[1]
@@ -165,6 +175,20 @@ class CrossAttention(nn.Module):
             out_ip = rearrange(out_ip, "(b h) n d -> b n (h d)", h=h)
             out = out + self.image_cross_attention_scale * out_ip
         del q
+
+        return self.to_out(out)
+
+    def native_forward(self, x, context=None, mask=None):
+        h = self.heads
+
+        q = self.to_q(x)
+        context = default(context, x)
+        k = self.to_k(context)
+        v = self.to_v(context)
+
+        q, k, v = map(lambda t: rearrange(t, "b n (h d) -> (b h) n d", h=h), (q, k, v))
+        out = F.scaled_dot_product_attention(q, k, v, attn_mask=None, dropout_p=0.0, is_causal=False)
+        out = rearrange(out, "(b h) n d -> b n (h d)", h=h)
 
         return self.to_out(out)
 
@@ -336,6 +360,7 @@ class BasicTransformerBlock(nn.Module):
         disable_self_attn=False,
         attention_cls=None,
         img_cross_attention=False,
+        record_attn_probs=False,
     ):
         super().__init__()
         attn_cls = CrossAttention if attention_cls is None else attention_cls
@@ -346,6 +371,7 @@ class BasicTransformerBlock(nn.Module):
             dim_head=d_head,
             dropout=dropout,
             context_dim=context_dim if self.disable_self_attn else None,
+            record_attn_probs=False,
         )
         self.ff = FeedForward(dim, dropout=dropout, glu=gated_ff)
         self.attn2 = attn_cls(
@@ -491,6 +517,7 @@ class TemporalTransformer(nn.Module):
         causal_attention=False,
         relative_position=False,
         temporal_length=None,
+        record_attn_probs=False,
     ):
         super().__init__()
         self.only_self_att = only_self_att

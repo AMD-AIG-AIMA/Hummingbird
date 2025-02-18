@@ -74,7 +74,11 @@ sh train_turbo.sh
 # Inference
 
 ```
-sh inference.sh
+# for 0.7B model
+python inference_command_config_07B.py
+
+# for 0.9B model
+python inference_command_config_09B.py
 ```
 
 # License
