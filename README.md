@@ -24,7 +24,7 @@ This implementation is released to promote further research and innovation in th
 | <img src="GIFs/A_serene_underwater_scene_featuring_a_sea_turtle_s.gif" width="320">  | <img src="GIFs/Animated_scene_features_a_close-up_of_a_short_fluf.gif" width="320"> | <img src="GIFs/A_close_up_view_of_a_glass_sphere_that_has_a_zen_g.gif" width="320"> | <img src="GIFs/A_drone_camera_circles_around_a_beautiful_historic.gif" width="320"> |
 
 # Checkpoint
-Our pretrained checkpoint can be downloaded from [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/hecui102/AMD-0.9B-Efficient-T2V-Diffusion/tree/main)
+Our pretrained checkpoint can be downloaded from [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/amd/AMD-Hummingbird-T2V/tree/main)
 
 # Installation
 ```
