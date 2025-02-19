@@ -9,12 +9,11 @@
 
 This implementation is released to promote further research and innovation in the field of efficient text-to-video generation, optimized for AMD Instinct accelerators.
 
-Compared to Videocrafter2 we achieved better visual quality and 96% latency reduction.
 
-| Diffusion Model         | Params. | Inference Latency on AMD Instinct MI250 fp16 | Aesthetic Quality | Motion Smoothness | Imaging Quality | Temporal Flickering | Background Consistency |
-|--------------------------|---------|----------------------------------------------|-------------------|-------------------|------------------|---------------------|-------------------------|
-| VideoCrafter2(50 steps, CFG=7.5)          | 1.4B    | 56s                                         | 63.8              | 96.2              | 67.3             | 93.6                | 96.9                    |
-| AMD efficient T2V model(4 steps)          | 945M    | 2.2s                                        | 67.9              | 96.8              | 71.6             | 95.4                | 97.6                    |
+![pic](GIFs\vbench.png "Vbench performance")
+
+
+
 
 **4-Steps Results**
 | The camera follows behind a white vintage SUV with a black roof rack as it speeds up a steep dirt road surrounded by pine trees on a steep mountain slope.            | Waves crashing against a lone lighthouse, ominous lighting.               | A vibrant underwater scene. A group of blue fish, with yellow fins, are swimming around a coral reef.                | A young man in his twenties sat on a cloud in the sky and flipped through the book he was reading.               |
