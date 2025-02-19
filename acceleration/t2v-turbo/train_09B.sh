@@ -17,7 +17,7 @@ CUDA_VISIBLE_DEVICES="4,5,6,7" accelerate launch --main_process_port 1997 train_
     --teacher_model_path VideoCrafter/checkpoints/base_512_v2/model.ckpt \
     --fps 8 \
     --max_train_steps 400000 \
-    --output_dir output/t2v-turbo-vc2-distil_jun_09B_58000_12000 \
+    --output_dir output/09B \
     --checkpointing_steps 1000 \
     --checkpoints_total_limit 20 \
     --seed 123456
