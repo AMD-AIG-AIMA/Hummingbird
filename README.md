@@ -10,9 +10,7 @@
 This implementation is released to promote further research and innovation in the field of efficient text-to-video generation, optimized for AMD Instinct accelerators.
 
 
-![pic](GIFs\vbench.png "Vbench performance")
-
-
+![pic](GIFs/vbench.png "Vbench performance")
 
 
 **4-Steps Results**
