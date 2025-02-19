@@ -67,7 +67,12 @@ sh configs/training_512_t2v_v1.0/run_distill.sh
 
 ```
 cd acceleration/t2v-turbo
-sh train_turbo.sh
+
+# for 0.7 B model
+sh train_07B.sh
+
+# for 0.9 B model
+sh train_09B.sh
 ```
 
 
