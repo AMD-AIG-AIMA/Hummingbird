@@ -16,7 +16,7 @@ This implementation is released to promote further research and innovation in th
 
 
 **8-Steps Results**
-| A cute happy Corgi playing in park, sunset, pixel.            | A cute happy Corgi playing in park, sunset, animated style.gif               | A cute raccoon playing guitar in the beach.                 | A cute raccoon playing guitar in the forest.                |
+| A cute happy Corgi playing in park, sunset, pixel.            | A cute happy Corgi playing in park, sunset, animated style.               | A cute raccoon playing guitar in the beach.                 | A cute raccoon playing guitar in the forest.                |
 |------------------------|-----------------------------|-----------------------------|-----------------------------|
 | <img src="GIFs/A_cute_happy_Corgi_playing_in_park,_sunset,_pixel_.gif" width="320">  | <img src="GIFs/A cute happy Corgi playing in park, sunset, animated style.gif" width="320"> | <img src="GIFs/A cute raccoon playing guitar in the beach.gif" width="320"> | <img src="GIFs/A cute raccoon playing guitar in the forest.gif" width="320"> |
 |**A quiet beach at dawn and the waves gently lapping.**|**A cute teddy bear, dressed in a red silk outfit, stands in a vibrant street, chinese new year.**|**A sandcastle being eroded by the incoming tide.**|**An astronaut flying in space, in cyberpunk style.**|
