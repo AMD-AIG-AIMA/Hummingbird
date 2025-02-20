@@ -16,13 +16,13 @@ This implementation is released to promote further research and innovation in th
 
 
 **8-Steps Results**
-| A 3D model of a 1800s victorian house.            | A cute happy Corgi playing in park, sunset, animated style.gif               | A cute raccoon playing guitar in the beach.                 | A cute raccoon playing guitar in the forest.                |
+| A cute happy Corgi playing in park, sunset, pixel.            | A cute happy Corgi playing in park, sunset, animated style.gif               | A cute raccoon playing guitar in the beach.                 | A cute raccoon playing guitar in the forest.                |
 |------------------------|-----------------------------|-----------------------------|-----------------------------|
-| <img src="GIFs/A 3D model of a 1800s victorian house..gif" width="320">  | <img src="GIFs/A cute happy Corgi playing in park, sunset, animated style.gif" width="320"> | <img src="GIFs/A cute raccoon playing guitar in the beach.gif" width="320"> | <img src="GIFs/A cute raccoon playing guitar in the forest.gif" width="320"> |
+| <img src="GIFs/A_cute_happy_Corgi_playing_in_park,_sunset,_pixel_.gif" width="320">  | <img src="GIFs/A cute happy Corgi playing in park, sunset, animated style.gif" width="320"> | <img src="GIFs/A cute raccoon playing guitar in the beach.gif" width="320"> | <img src="GIFs/A cute raccoon playing guitar in the forest.gif" width="320"> |
 |**A quiet beach at dawn and the waves gently lapping.**|**A cute teddy bear, dressed in a red silk outfit, stands in a vibrant street, chinese new year.**|**A sandcastle being eroded by the incoming tide.**|**An astronaut flying in space, in cyberpunk style.**|
 |<img src="GIFs/A_quiet_beach_at_dawn_and_the_waves_gently_lapping.gif" width="320">|<img src="GIFs/A cute teddy bear, dressed in a red silk outfit, stands in a vibrant street, chinese new year..gif" width="320">|<img src="GIFs/A sandcastle being eroded by the incoming tide.gif" width="320">|<img src="GIFs/An astronaut flying in space, in cyberpunk style.gif" width="320">|
-|**A cat DJ at a party.**|**A cute happy Corgi playing in park, sunset, pixel.**|**A drone flying over a snowy forest.**|**A ghost ship navigating through a sea under a moon.**|
-|<img src="GIFs/A_cat_DJ_at_a_party.gif" width="320">|<img src="GIFs/A_cute_happy_Corgi_playing_in_park,_sunset,_pixel_.gif" width="320">|<img src="GIFs/a_drone_flying_over_a_snowy_forest.gif" width="320">|<img src="GIFs/A_ghost_ship_navigating_through_a_sea_under_a_moon.gif" width="320">|
+|**A cat DJ at a party.**|**A 3D model of a 1800s victorian house.**|**A drone flying over a snowy forest.**|**A ghost ship navigating through a sea under a moon.**|
+|<img src="GIFs/A_cat_DJ_at_a_party.gif" width="320">|<img src="GIFs/A 3D model of a 1800s victorian house..gif" width="320">|<img src="GIFs/a_drone_flying_over_a_snowy_forest.gif" width="320">|<img src="GIFs/A_ghost_ship_navigating_through_a_sea_under_a_moon.gif" width="320">|
 
 # Checkpoint
 Our pretrained checkpoint can be downloaded from [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/amd/AMD-Hummingbird-T2V/tree/main)
