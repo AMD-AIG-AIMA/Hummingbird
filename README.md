@@ -28,16 +28,13 @@ This implementation is released to promote further research and innovation in th
 Our pretrained checkpoint can be downloaded from [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/amd/AMD-Hummingbird-T2V/tree/main)
 
 # Installation
+We train both 0.9B and 0.7 T2V models on MI250 and evalute them on MI250, RTX7900xt and RadeonTM 880M RyzenTM AI 9 3650Ubuntu 6.8.0-51-generic.
+
 ```
+pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/rocm5.6
 pip install -r requirements.txt
-
-pip install flash-attn --no-build-isolation
-git clone https://github.com/Dao-AILab/flash-attention.git
-cd flash-attention
-pip install csrc/fused_dense_lib csrc/layer_norm
-
-conda install xformers -c xformers
 ```
+For rocm flash-attn, you can install it by this [link](https://github.com/ROCm/flash-attention).
 # Data Processing
 
 ## VQA
