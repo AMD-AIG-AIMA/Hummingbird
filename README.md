@@ -31,10 +31,16 @@ Our pretrained checkpoint can be downloaded from [![HuggingFace](https://img.shi
 We train both 0.9B and 0.7 T2V models on MI250 and evalute them on MI250, RTX7900xt and RadeonTM 880M RyzenTM AI 9 3650Ubuntu 6.8.0-51-generic.
 
 ```
-pip install torch==2.2.0 torchvision==0.17.0 torchaudio==2.2.0 --index-url https://download.pytorch.org/whl/rocm5.6
+pip install torch==2.5.1 torchvision==0.20.1 torchaudio==2.5.1 --index-url https://download.pytorch.org/whl/rocm6.1
 pip install -r requirements.txt
 ```
 For rocm flash-attn, you can install it by this [link](https://github.com/ROCm/flash-attention).
+```
+git clone https://github.com/ROCm/flash-attention.git
+cd flash-attention
+python setup.py install
+```
+It will take about 1.5 hours to install.
 # Data Processing
 
 ## VQA
