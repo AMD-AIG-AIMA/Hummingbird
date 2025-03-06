@@ -107,7 +107,7 @@ class CrossAttention(nn.Module):
             self.forward = self.native_forward
             ## only used for spatial attention, while NOT for temporal attention
             if FLASH_IS_AVAILBLE and temporal_length is None:
-                self.forward = self.efficient_forward_flash_attention
+                self.forward = self.forward
             elif XFORMERS_IS_AVAILBLE and temporal_length is None:
                 self.forward = self.efficient_forward
         
