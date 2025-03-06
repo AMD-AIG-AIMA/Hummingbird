@@ -28,8 +28,9 @@ This implementation is released to promote further research and innovation in th
 Our pretrained checkpoint can be downloaded from [![HuggingFace](https://img.shields.io/badge/%F0%9F%A4%97%20Hugging%20Face-Model-blue)](https://huggingface.co/amd/AMD-Hummingbird-T2V/tree/main)
 
 # Installation
-We train both 0.9B and 0.7 T2V models on MI250 and evalute them on MI250, RTX7900xt and RadeonTM 880M RyzenTM AI 9 3650Ubuntu 6.8.0-51-generic.
+We train both 0.9B and 0.7 T2V models on MI250 and evalute them on MI250, MI300, RTX7900xt and RadeonTM 880M RyzenTM AI 9 365 Ubuntu 6.8.0-51-generic.
 
+## conda
 ```
 conda create -n AMD_Hummingbird python=3.10
 conda activate AMD_Hummingbird
@@ -43,6 +44,28 @@ cd flash-attention
 python setup.py install
 ```
 It will take about 1.5 hours to install.
+
+## docker
+First, you should use `docker pull` to download the image.
+```
+docker pull rocm/vllm:rocm6.2_mi300_ubuntu20.04_py3.9_vllm_0.6.4
+```
+Second, you can use  `docker run` to run the image, for example:
+```
+docker run \
+        -v "$(pwd):/workspace" \
+        --device=/dev/kfd \
+        --device=/dev/dri \
+        -it \
+        --network=host \
+        --name hummingbird \
+        rocm/vllm:rocm6.2_mi300_ubuntu20.04_py3.9_vllm_0.6.4
+```
+When you in the container, you can use `pip` to install other dependencies:
+```
+pip install -r requirements.txt
+```
+
 # Data Processing
 
 ## VQA
