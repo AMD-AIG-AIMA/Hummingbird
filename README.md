@@ -82,12 +82,6 @@ Download the Image-to-Video pretrained checkpoint from [Hummingbird-Image-to-Vid
 Run below command to generate videos:
 ```
 cd i2v
-git clone https://github.com/Doubiiu/DynamiCrafter.git
-cd configs
-wget https://huggingface.co/amd/AMD-Hummingbird-I2V/blob/main/inference_512_v1.0_09B.yaml
-cd ..
-wget https://huggingface.co/amd/AMD-Hummingbird-I2V/blob/main/inference.py
-wget https://huggingface.co/amd/AMD-Hummingbird-I2V/blob/main/run_hummingbird.sh
 sh run_hummingbird.sh
 ```
 #### Image/Video Super-Resolution
