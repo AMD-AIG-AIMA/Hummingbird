@@ -1,0 +1,1 @@
+# download from https://github.com/Ji4chenLi/t2v-turbo/tree/main/intern_vid2

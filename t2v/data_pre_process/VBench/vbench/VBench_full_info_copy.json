@@ -1,0 +1,39 @@
+[
+    {
+        "prompt_en": "0-modelscopet2v-laion",
+        "dimension": [
+            "temporal_flickering"
+        ]
+    },
+    {
+        "prompt_en": "1-modelscopet2v-laion",
+        "dimension": [
+            "aesthetic_quality"
+        ]
+    },
+    {
+        "prompt_en": "2-modelscopet2v-laion",
+        "dimension": [
+            "aesthetic_quality"
+        ]
+    },
+    {
+        "prompt_en": "3-modelscopet2v-laion",
+        "dimension": [
+            "aesthetic_quality"
+        ]
+    },
+    {
+        "prompt_en": "4-modelscopet2v-laion",
+        "dimension": [
+            "aesthetic_quality"
+        ]
+    },
+    {
+        "prompt_en": "5-modelscopet2v-laion",
+        "dimension": [
+            "aesthetic_quality"
+        ]
+    }
+]
+
