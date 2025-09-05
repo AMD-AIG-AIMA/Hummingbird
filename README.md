@@ -86,7 +86,7 @@ cd i2v
 sh run_hummingbird.sh
 ```
 #### Image/Video Super-Resolution
-Download SR pretrained checkpoint from [Hummingbird-Text-to-Video](https://huggingface.co/amd/AMD-Hummingbird-T2V/tree/main).
+Download SR pretrained checkpoint from [Hummingbird-Image-to-Video](https://huggingface.co/amd/AMD-Hummingbird-I2V/tree/main).
 Run below command to generate high-resolution videos:
 ```
 cd VSR
