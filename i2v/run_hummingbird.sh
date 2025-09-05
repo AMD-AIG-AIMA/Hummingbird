@@ -3,7 +3,7 @@ version=$1  ## 1024, 512, 256
 GPU=3
 ckpt='./stage_1.ckpt'
 config='configs/inference_512_v1.0_09B.yaml'
-prompt_dir="/VBench"
+prompt_dir="./VBench"
 base_res_dir="result"
 
 # 判断分辨率
@@ -29,7 +29,7 @@ res_dir="${base_res_dir}/${sub_dir}"
 echo "Running seed=$seed -> Saving to: $res_dir"
 echo $prompt_dir
 
-CUDA_VISIBLE_DEVICES=$GPU python3 scripts/evaluation/inference.py \
+ROCR_VISIBLE_DEVICES=$GPU python3 scripts/evaluation/inference.py \
     --seed ${seed} \
     --ckpt_path $ckpt \
     --config $config \

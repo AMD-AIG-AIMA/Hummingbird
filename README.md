@@ -22,9 +22,10 @@
 |**A cat DJ at a party.**|**A 3D model of a 1800s victorian house.**|**A drone flying over a snowy forest.**|**A ghost ship navigating through a sea under a moon.**|
 |<img src="GIFs/A_cat_DJ_at_a_party.gif" width="320">|<img src="GIFs/A 3D model of a 1800s victorian house..gif" width="320">|<img src="GIFs/a_drone_flying_over_a_snowy_forest.gif" width="320">|<img src="GIFs/A_ghost_ship_navigating_through_a_sea_under_a_moon.gif" width="320">|
 ## 📝 Change Log
+- __[2025.08.03]__: 🔥🔥Release [Hummingbird Image-to-Video](https://rocm.blogs.amd.com/artificial-intelligence/image-to-video/README.html) Technical Report! 
 - __[2025.07.30]__: 🔥🔥Release pretrained Image-to-Video model and VSR model, and their training and inference code! 
-- __[2025.03.24]__: Release [AMD-Hummingbird: Towards an Efficient Text-to-Video Model](https://arxiv.org/abs/2503.18559) Paper!
-- __[2025.02.28]__: Release [Hummingbird Text-to-Video](https://www.amd.com/en/developer/resources/technical-articles/amd-hummingbird-0-9b-text-to-video-diffusion-model-with-4-step-inferencing.html) Technical Report! 
+- __[2025.03.24]__: 🔥🔥Release [AMD-Hummingbird: Towards an Efficient Text-to-Video Model](https://arxiv.org/abs/2503.18559) Paper!
+- __[2025.02.28]__: 🔥🔥Release [Hummingbird Text-to-Video](https://www.amd.com/en/developer/resources/technical-articles/amd-hummingbird-0-9b-text-to-video-diffusion-model-with-4-step-inferencing.html) Technical Report! 
 - __[2025.02.26]__: 🔥🔥Release pretrained Text-to-Video models, training and inference code! 
 
 
