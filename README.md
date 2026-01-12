@@ -22,6 +22,9 @@
 |**A cat DJ at a party.**|**A 3D model of a 1800s victorian house.**|**A drone flying over a snowy forest.**|**A ghost ship navigating through a sea under a moon.**|
 |<img src="GIFs/A_cat_DJ_at_a_party.gif" width="320">|<img src="GIFs/A 3D model of a 1800s victorian house..gif" width="320">|<img src="GIFs/a_drone_flying_over_a_snowy_forest.gif" width="320">|<img src="GIFs/A_ghost_ship_navigating_through_a_sea_under_a_moon.gif" width="320">|
 ## 📝 Change Log
+- __[2026.01.09]__: 🔥🔥Release the full code and pre-trained weight of [HummingbirdXT](https://github.com/AMD-AGI/HummingbirdXT)!
+- __[2026.01.08]__: 🔥🔥Our new model Hummingbird-XT has been released, this is the technical report link:
+: [Bridging the Last Mile: Deploying Hummingbird-XT for Efficient Video Generation on AMD Consumer-Grade Platforms](https://rocm.blogs.amd.com/artificial-intelligence/hummingbirdxt/README.html)!
 - __[2025.08.03]__: 🔥🔥Release [Hummingbird Image-to-Video](https://rocm.blogs.amd.com/artificial-intelligence/image-to-video/README.html) Technical Report! 
 - __[2025.07.30]__: 🔥🔥Release pretrained Image-to-Video model and VSR model, and their training and inference code! 
 - __[2025.03.24]__: 🔥🔥Release [AMD-Hummingbird: Towards an Efficient Text-to-Video Model](https://arxiv.org/abs/2503.18559) Paper!
